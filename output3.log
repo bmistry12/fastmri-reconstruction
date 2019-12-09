@@ -1,0 +1,358 @@
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [1, 8, 320, 320]              16
+    InstanceNorm2d-2           [1, 8, 320, 320]               0
+              ReLU-3           [1, 8, 320, 320]               0
+         Dropout2d-4           [1, 8, 320, 320]               0
+            Conv2d-5           [1, 8, 320, 320]              72
+    InstanceNorm2d-6           [1, 8, 320, 320]               0
+              ReLU-7           [1, 8, 320, 320]               0
+         Dropout2d-8           [1, 8, 320, 320]               0
+         ConvBlock-9           [1, 8, 320, 320]               0
+           Conv2d-10          [1, 16, 160, 160]             144
+   InstanceNorm2d-11          [1, 16, 160, 160]               0
+             ReLU-12          [1, 16, 160, 160]               0
+        Dropout2d-13          [1, 16, 160, 160]               0
+           Conv2d-14          [1, 16, 160, 160]             272
+   InstanceNorm2d-15          [1, 16, 160, 160]               0
+             ReLU-16          [1, 16, 160, 160]               0
+        Dropout2d-17          [1, 16, 160, 160]               0
+        ConvBlock-18          [1, 16, 160, 160]               0
+           Conv2d-19            [1, 32, 80, 80]             544
+   InstanceNorm2d-20            [1, 32, 80, 80]               0
+             ReLU-21            [1, 32, 80, 80]               0
+        Dropout2d-22            [1, 32, 80, 80]               0
+           Conv2d-23            [1, 32, 80, 80]           1,056
+   InstanceNorm2d-24            [1, 32, 80, 80]               0
+             ReLU-25            [1, 32, 80, 80]               0
+        Dropout2d-26            [1, 32, 80, 80]               0
+        ConvBlock-27            [1, 32, 80, 80]               0
+           Conv2d-28            [1, 64, 40, 40]           2,112
+   InstanceNorm2d-29            [1, 64, 40, 40]               0
+             ReLU-30            [1, 64, 40, 40]               0
+        Dropout2d-31            [1, 64, 40, 40]               0
+           Conv2d-32            [1, 64, 40, 40]           4,160
+   InstanceNorm2d-33            [1, 64, 40, 40]               0
+             ReLU-34            [1, 64, 40, 40]               0
+        Dropout2d-35            [1, 64, 40, 40]               0
+        ConvBlock-36            [1, 64, 40, 40]               0
+           Conv2d-37            [1, 64, 20, 20]           4,160
+   InstanceNorm2d-38            [1, 64, 20, 20]               0
+             ReLU-39            [1, 64, 20, 20]               0
+        Dropout2d-40            [1, 64, 20, 20]               0
+           Conv2d-41            [1, 64, 20, 20]           4,160
+   InstanceNorm2d-42            [1, 64, 20, 20]               0
+             ReLU-43            [1, 64, 20, 20]               0
+        Dropout2d-44            [1, 64, 20, 20]               0
+        ConvBlock-45            [1, 64, 20, 20]               0
+           Conv2d-46            [1, 32, 40, 40]           4,128
+   InstanceNorm2d-47            [1, 32, 40, 40]               0
+             ReLU-48            [1, 32, 40, 40]               0
+        Dropout2d-49            [1, 32, 40, 40]               0
+           Conv2d-50            [1, 32, 40, 40]           1,056
+   InstanceNorm2d-51            [1, 32, 40, 40]               0
+             ReLU-52            [1, 32, 40, 40]               0
+        Dropout2d-53            [1, 32, 40, 40]               0
+        ConvBlock-54            [1, 32, 40, 40]               0
+           Conv2d-55            [1, 16, 80, 80]           1,040
+   InstanceNorm2d-56            [1, 16, 80, 80]               0
+             ReLU-57            [1, 16, 80, 80]               0
+        Dropout2d-58            [1, 16, 80, 80]               0
+           Conv2d-59            [1, 16, 80, 80]             272
+   InstanceNorm2d-60            [1, 16, 80, 80]               0
+             ReLU-61            [1, 16, 80, 80]               0
+        Dropout2d-62            [1, 16, 80, 80]               0
+        ConvBlock-63            [1, 16, 80, 80]               0
+           Conv2d-64           [1, 8, 160, 160]             264
+   InstanceNorm2d-65           [1, 8, 160, 160]               0
+             ReLU-66           [1, 8, 160, 160]               0
+        Dropout2d-67           [1, 8, 160, 160]               0
+           Conv2d-68           [1, 8, 160, 160]              72
+   InstanceNorm2d-69           [1, 8, 160, 160]               0
+             ReLU-70           [1, 8, 160, 160]               0
+        Dropout2d-71           [1, 8, 160, 160]               0
+        ConvBlock-72           [1, 8, 160, 160]               0
+           Conv2d-73           [1, 8, 320, 320]             136
+   InstanceNorm2d-74           [1, 8, 320, 320]               0
+             ReLU-75           [1, 8, 320, 320]               0
+        Dropout2d-76           [1, 8, 320, 320]               0
+           Conv2d-77           [1, 8, 320, 320]              72
+   InstanceNorm2d-78           [1, 8, 320, 320]               0
+             ReLU-79           [1, 8, 320, 320]               0
+        Dropout2d-80           [1, 8, 320, 320]               0
+        ConvBlock-81           [1, 8, 320, 320]               0
+           Conv2d-82           [1, 4, 320, 320]              36
+           Conv2d-83           [1, 1, 320, 320]               5
+           Conv2d-84           [1, 1, 320, 320]               2
+================================================================
+Total params: 23,779
+Trainable params: 23,779
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.39
+Forward/backward pass size (MB): 192.77
+Params size (MB): 0.09
+Estimated Total Size (MB): 193.25
+----------------------------------------------------------------
+Training on 1714
+Validating on 420
+Epoch: 1/75
+ Train Loss: 0.12905115576664566 | Validation Loss: 0.12437924438129862
+Train Time: 42.83585115597816 | Validation Time: 10.852533320023213
+Epoch: 2/75
+ Train Loss: 0.1364556632415341 | Validation Loss: 0.12397789602211308
+Train Time: 42.93458479401306 | Validation Time: 10.846044569974765
+Epoch: 3/75
+ Train Loss: 0.11840487447915513 | Validation Loss: 0.1233344908420258
+Train Time: 43.278689509024844 | Validation Time: 10.926250891003292
+Epoch: 4/75
+ Train Loss: 0.12369819867551586 | Validation Loss: 0.12828801878260027
+Train Time: 43.29951611999422 | Validation Time: 10.905702338000992
+Epoch: 5/75
+ Train Loss: 0.11944904768781404 | Validation Loss: 0.11951096588973706
+Train Time: 43.274538979982026 | Validation Time: 10.97122507201857
+Epoch: 6/75
+ Train Loss: 0.13626585429524432 | Validation Loss: 0.14524026386689276
+Train Time: 43.29869895899901 | Validation Time: 10.93929261501762
+Epoch: 7/75
+ Train Loss: 0.11923595865833328 | Validation Loss: 0.12599242365854513
+Train Time: 43.32250743600889 | Validation Time: 10.982347323006252
+Epoch: 8/75
+ Train Loss: 0.11736974766250301 | Validation Loss: 0.1134415066862114
+Train Time: 43.59141248499509 | Validation Time: 10.88931955298176
+Epoch: 9/75
+ Train Loss: 0.11812965101867295 | Validation Loss: 0.12514609918588337
+Train Time: 43.3978513990005 | Validation Time: 10.903257183992537
+Epoch: 10/75
+ Train Loss: 0.12370290503606392 | Validation Loss: 0.11704253811494322
+Train Time: 43.11963463301072 | Validation Time: 10.819609327998478
+Epoch: 11/75
+ Train Loss: 0.12913743493393412 | Validation Loss: 0.12383256647815517
+Train Time: 43.05923722498119 | Validation Time: 10.82413789301063
+Epoch: 12/75
+ Train Loss: 0.11771307312043697 | Validation Loss: 0.11918574651084003
+Train Time: 43.250210986007005 | Validation Time: 10.914470429008361
+Epoch: 13/75
+ Train Loss: 0.1182937798319535 | Validation Loss: 0.1206863301268326
+Train Time: 43.02033703500638 | Validation Time: 10.807993316993816
+Epoch: 14/75
+ Train Loss: 0.11928916694118977 | Validation Loss: 0.1254427154831297
+Train Time: 43.385663456982 | Validation Time: 10.979693909990601
+Epoch: 15/75
+ Train Loss: 0.11770109626020307 | Validation Loss: 0.13076258723930576
+Train Time: 43.193050063971896 | Validation Time: 10.892171269020764
+Epoch: 16/75
+ Train Loss: 0.06996092618430652 | Validation Loss: 0.06973702102542782
+Train Time: 43.112451333989156 | Validation Time: 10.870828026992967
+Epoch: 17/75
+ Train Loss: 0.07123305763865748 | Validation Loss: 0.06592981466423904
+Train Time: 43.08786917498219 | Validation Time: 10.85488147099386
+Epoch: 18/75
+ Train Loss: 0.06515484198140731 | Validation Loss: 0.06521058297681828
+Train Time: 43.089144660014426 | Validation Time: 10.828579980006907
+Epoch: 19/75
+ Train Loss: 0.0683537058979797 | Validation Loss: 0.06612997971315754
+Train Time: 42.987531388993375 | Validation Time: 10.88849727899651
+Epoch: 20/75
+ Train Loss: 0.07004699412312804 | Validation Loss: 0.06606615730228634
+Train Time: 42.997337998007424 | Validation Time: 10.854227331001312
+Epoch: 21/75
+ Train Loss: 0.06746001473288724 | Validation Loss: 0.06658634576419312
+Train Time: 43.05530392497894 | Validation Time: 10.859712425997714
+Epoch: 22/75
+ Train Loss: 0.06900867965094874 | Validation Loss: 0.06349929660816968
+Train Time: 43.14858104599989 | Validation Time: 10.831368799001211
+Epoch: 23/75
+ Train Loss: 0.06645219027380506 | Validation Loss: 0.06658523614212526
+Train Time: 43.146187042992096 | Validation Time: 10.876704144000541
+Epoch: 24/75
+ Train Loss: 0.0686922891080787 | Validation Loss: 0.06315057848624557
+Train Time: 43.15816627800814 | Validation Time: 10.813498681003693
+Epoch: 25/75
+ Train Loss: 0.06467071912511106 | Validation Loss: 0.06293542511094488
+Train Time: 43.16636011202354 | Validation Time: 10.875835187995108
+Epoch: 26/75
+ Train Loss: 0.06779443397760049 | Validation Loss: 0.06538181684447188
+Train Time: 43.154563545977 | Validation Time: 10.955425193998963
+Epoch: 27/75
+ Train Loss: 0.06670818024210128 | Validation Loss: 0.06538098167793616
+Train Time: 43.4684500140138 | Validation Time: 11.00118430799921
+Epoch: 28/75
+ Train Loss: 0.06731739098060581 | Validation Loss: 0.0641815750829823
+Train Time: 44.024317246017745 | Validation Time: 10.945806416013511
+Epoch: 29/75
+ Train Loss: 0.06409476966083015 | Validation Loss: 0.0636334183379343
+Train Time: 43.321193159004906 | Validation Time: 10.838141159998486
+Epoch: 30/75
+ Train Loss: 0.06659895680315249 | Validation Loss: 0.06365127335568208
+Train Time: 43.14439817299717 | Validation Time: 10.837059832003433
+Epoch: 31/75
+ Train Loss: 0.06334398181957183 | Validation Loss: 0.06166836779649628
+Train Time: 43.0345032660116 | Validation Time: 10.868169134977506
+Epoch: 32/75
+ Train Loss: 0.06361282741500801 | Validation Loss: 0.06232117242241134
+Train Time: 43.11067026699311 | Validation Time: 10.877759483002592
+Epoch: 33/75
+ Train Loss: 0.06370564490962266 | Validation Loss: 0.05941778332497896
+Train Time: 43.129298476007534 | Validation Time: 10.851719256985234
+Epoch: 34/75
+ Train Loss: 0.06266681495396238 | Validation Loss: 0.05887188165254436
+Train Time: 43.143027885991614 | Validation Time: 10.846301037003286
+Epoch: 35/75
+ Train Loss: 0.06554417852570246 | Validation Loss: 0.06232454001274661
+Train Time: 43.14336222098791 | Validation Time: 10.847991358983563
+Epoch: 36/75
+ Train Loss: 0.06087252583731694 | Validation Loss: 0.05911989614961347
+Train Time: 43.092065939999884 | Validation Time: 10.86890180199407
+Epoch: 37/75
+ Train Loss: 0.06267752416898806 | Validation Loss: 0.061004824680085806
+Train Time: 43.06641275098082 | Validation Time: 10.8812709809863
+Epoch: 38/75
+ Train Loss: 0.061388463144509756 | Validation Loss: 0.06176531404171003
+Train Time: 42.97151917300653 | Validation Time: 10.8622931560094
+Epoch: 39/75
+ Train Loss: 0.06309212254957842 | Validation Loss: 0.06016550721351349
+Train Time: 43.095895401987946 | Validation Time: 10.827939976996277
+Epoch: 40/75
+ Train Loss: 0.06223811986065859 | Validation Loss: 0.05999230608960405
+Train Time: 43.06095345001086 | Validation Time: 10.800952529010829
+Epoch: 41/75
+ Train Loss: 0.06347105888128098 | Validation Loss: 0.06036442002935059
+Train Time: 43.07648771200911 | Validation Time: 10.858265460003167
+Epoch: 42/75
+ Train Loss: 0.06254607546775535 | Validation Loss: 0.06343740387441994
+Train Time: 43.17209671600722 | Validation Time: 10.884970710001653
+Epoch: 43/75
+ Train Loss: 0.06322242445439714 | Validation Loss: 0.060993983338189596
+Train Time: 43.43124649798847 | Validation Time: 10.851119053026196
+Epoch: 44/75
+ Train Loss: 0.06402838473460186 | Validation Loss: 0.06015146633418817
+Train Time: 43.06268180900952 | Validation Time: 10.835366534010973
+Epoch: 45/75
+ Train Loss: 0.06453618124140853 | Validation Loss: 0.06099000701946064
+Train Time: 43.14755768000032 | Validation Time: 10.838628591009183
+Epoch: 46/75
+ Train Loss: 0.06338158464385951 | Validation Loss: 0.06021706866815124
+Train Time: 43.063175679999404 | Validation Time: 10.842180631007068
+Epoch: 47/75
+ Train Loss: 0.06479303152783172 | Validation Loss: 0.06075140980277613
+Train Time: 43.04288698401069 | Validation Time: 10.828505465993658
+Epoch: 48/75
+ Train Loss: 0.06204842952174424 | Validation Loss: 0.06215499272219503
+Train Time: 43.12350618999335 | Validation Time: 10.86061708201305
+Epoch: 49/75
+ Train Loss: 0.06434504905685613 | Validation Loss: 0.06328389619682143
+Train Time: 43.03995138200116 | Validation Time: 10.90658393999911
+Epoch: 50/75
+ Train Loss: 0.06364314161434792 | Validation Loss: 0.060598187756028786
+Train Time: 43.046455861011054 | Validation Time: 10.847201010998106
+Epoch: 51/75
+ Train Loss: 0.06409772221323291 | Validation Loss: 0.05886292076306507
+Train Time: 43.05372170198825 | Validation Time: 10.884918642987031
+Epoch: 52/75
+ Train Loss: 0.061004301392426956 | Validation Loss: 0.059548215031892865
+Train Time: 43.139884243981214 | Validation Time: 10.86428383801831
+Epoch: 53/75
+ Train Loss: 0.06279484879907928 | Validation Loss: 0.06130888179253029
+Train Time: 43.183715024002595 | Validation Time: 10.879431901004864
+Epoch: 54/75
+ Train Loss: 0.06252923634793248 | Validation Loss: 0.060749888640890634
+Train Time: 43.12878537198412 | Validation Time: 10.86390810998273
+Epoch: 55/75
+ Train Loss: 0.06391629974552904 | Validation Loss: 0.05988194914538923
+Train Time: 43.028486993018305 | Validation Time: 10.873149735998595
+Epoch: 56/75
+ Train Loss: 0.06356240299756166 | Validation Loss: 0.05939943212462811
+Train Time: 43.07466657302575 | Validation Time: 10.866807022015564
+Epoch: 57/75
+ Train Loss: 0.06405564224872755 | Validation Loss: 0.060551319721450995
+Train Time: 43.05972735301475 | Validation Time: 10.854928560991539
+Epoch: 58/75
+ Train Loss: 0.06498398748096901 | Validation Loss: 0.06072683364508519
+Train Time: 43.10913613700541 | Validation Time: 10.856096428993624
+Epoch: 59/75
+ Train Loss: 0.06472088908749825 | Validation Loss: 0.060771170469120915
+Train Time: 43.14203059399733 | Validation Time: 10.823926927987486
+Epoch: 60/75
+ Train Loss: 0.06331796817968126 | Validation Loss: 0.06011145255655476
+Train Time: 43.163959533994785 | Validation Time: 10.863037309987703
+Epoch: 61/75
+ Train Loss: 0.06353908534708858 | Validation Loss: 0.06047743686240887
+Train Time: 43.04736596799921 | Validation Time: 10.86358338498394
+Epoch: 62/75
+ Train Loss: 0.06262767993708204 | Validation Loss: 0.06273641009039738
+Train Time: 43.10881637697457 | Validation Time: 10.903566077002324
+Epoch: 63/75
+ Train Loss: 0.061442311577610785 | Validation Loss: 0.061562184737823836
+Train Time: 43.17242760799127 | Validation Time: 10.85437482802081
+Epoch: 64/75
+ Train Loss: 0.06352481964785825 | Validation Loss: 0.060391851109103015
+Train Time: 43.06480594200548 | Validation Time: 10.867973395012086
+Epoch: 65/75
+ Train Loss: 0.06354437791067151 | Validation Loss: 0.06252080801735642
+Train Time: 43.08106458600378 | Validation Time: 10.801706631988054
+Epoch: 66/75
+ Train Loss: 0.06443302805926941 | Validation Loss: 0.06139649832584407
+Train Time: 43.11849729300593 | Validation Time: 10.836706870992202
+Epoch: 67/75
+ Train Loss: 0.06624918219640749 | Validation Loss: 0.06190251275007871
+Train Time: 43.120033649000106 | Validation Time: 10.854148690006696
+Epoch: 68/75
+ Train Loss: 0.06229845798490811 | Validation Loss: 0.061339915307010426
+Train Time: 43.04925559100229 | Validation Time: 10.893125672999304
+Epoch: 69/75
+ Train Loss: 0.06292192893733718 | Validation Loss: 0.062192420751079204
+Train Time: 43.02975993300788 | Validation Time: 10.820741325995186
+Epoch: 70/75
+ Train Loss: 0.06141763479025215 | Validation Loss: 0.06156563895894506
+Train Time: 43.06559520799783 | Validation Time: 10.862964411004214
+Epoch: 71/75
+ Train Loss: 0.060211445498546894 | Validation Loss: 0.06133123451020472
+Train Time: 43.10105572399334 | Validation Time: 10.828965577995405
+Epoch: 72/75
+ Train Loss: 0.06239077269146513 | Validation Loss: 0.060360827008271487
+Train Time: 43.152136353979586 | Validation Time: 10.852219266991597
+Epoch: 73/75
+ Train Loss: 0.06327401737612996 | Validation Loss: 0.06178373078210971
+Train Time: 43.186887473013485 | Validation Time: 10.871731510997051
+Epoch: 74/75
+ Train Loss: 0.06400871959660918 | Validation Loss: 0.06210424125685606
+Train Time: 43.099748194013955 | Validation Time: 10.89761047399952
+Epoch: 75/75
+ Train Loss: 0.06475521839344428 | Validation Loss: 0.06222789332511995
+Train Time: 43.07215934098349 | Validation Time: 10.84730790698086
+torch.Size([320, 320])
+torch.Size([320, 320])
+torch.Size([320, 320])
+Average SSIM: 0.4252162366636804
+30
+61
+94
+127
+155
+184
+209
+239
+267
+295
+320
+352
+377
+407
+444
+479
+514
+547
+579
+604
+637
+667
+700
+729
+759
+791
+822
+857
+892
+920

@@ -1,0 +1,193 @@
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [1, 8, 320, 320]              16
+    InstanceNorm2d-2           [1, 8, 320, 320]               0
+              ReLU-3           [1, 8, 320, 320]               0
+         Dropout2d-4           [1, 8, 320, 320]               0
+            Conv2d-5           [1, 8, 320, 320]              72
+    InstanceNorm2d-6           [1, 8, 320, 320]               0
+              ReLU-7           [1, 8, 320, 320]               0
+         Dropout2d-8           [1, 8, 320, 320]               0
+         ConvBlock-9           [1, 8, 320, 320]               0
+           Conv2d-10          [1, 16, 160, 160]             144
+   InstanceNorm2d-11          [1, 16, 160, 160]               0
+             ReLU-12          [1, 16, 160, 160]               0
+        Dropout2d-13          [1, 16, 160, 160]               0
+           Conv2d-14          [1, 16, 160, 160]             272
+   InstanceNorm2d-15          [1, 16, 160, 160]               0
+             ReLU-16          [1, 16, 160, 160]               0
+        Dropout2d-17          [1, 16, 160, 160]               0
+        ConvBlock-18          [1, 16, 160, 160]               0
+           Conv2d-19            [1, 32, 80, 80]             544
+   InstanceNorm2d-20            [1, 32, 80, 80]               0
+             ReLU-21            [1, 32, 80, 80]               0
+        Dropout2d-22            [1, 32, 80, 80]               0
+           Conv2d-23            [1, 32, 80, 80]           1,056
+   InstanceNorm2d-24            [1, 32, 80, 80]               0
+             ReLU-25            [1, 32, 80, 80]               0
+        Dropout2d-26            [1, 32, 80, 80]               0
+        ConvBlock-27            [1, 32, 80, 80]               0
+           Conv2d-28            [1, 64, 40, 40]           2,112
+   InstanceNorm2d-29            [1, 64, 40, 40]               0
+             ReLU-30            [1, 64, 40, 40]               0
+        Dropout2d-31            [1, 64, 40, 40]               0
+           Conv2d-32            [1, 64, 40, 40]           4,160
+   InstanceNorm2d-33            [1, 64, 40, 40]               0
+             ReLU-34            [1, 64, 40, 40]               0
+        Dropout2d-35            [1, 64, 40, 40]               0
+        ConvBlock-36            [1, 64, 40, 40]               0
+           Conv2d-37            [1, 64, 20, 20]           4,160
+   InstanceNorm2d-38            [1, 64, 20, 20]               0
+             ReLU-39            [1, 64, 20, 20]               0
+        Dropout2d-40            [1, 64, 20, 20]               0
+           Conv2d-41            [1, 64, 20, 20]           4,160
+   InstanceNorm2d-42            [1, 64, 20, 20]               0
+             ReLU-43            [1, 64, 20, 20]               0
+        Dropout2d-44            [1, 64, 20, 20]               0
+        ConvBlock-45            [1, 64, 20, 20]               0
+           Conv2d-46            [1, 32, 40, 40]           4,128
+   InstanceNorm2d-47            [1, 32, 40, 40]               0
+             ReLU-48            [1, 32, 40, 40]               0
+        Dropout2d-49            [1, 32, 40, 40]               0
+           Conv2d-50            [1, 32, 40, 40]           1,056
+   InstanceNorm2d-51            [1, 32, 40, 40]               0
+             ReLU-52            [1, 32, 40, 40]               0
+        Dropout2d-53            [1, 32, 40, 40]               0
+        ConvBlock-54            [1, 32, 40, 40]               0
+           Conv2d-55            [1, 16, 80, 80]           1,040
+   InstanceNorm2d-56            [1, 16, 80, 80]               0
+             ReLU-57            [1, 16, 80, 80]               0
+        Dropout2d-58            [1, 16, 80, 80]               0
+           Conv2d-59            [1, 16, 80, 80]             272
+   InstanceNorm2d-60            [1, 16, 80, 80]               0
+             ReLU-61            [1, 16, 80, 80]               0
+        Dropout2d-62            [1, 16, 80, 80]               0
+        ConvBlock-63            [1, 16, 80, 80]               0
+           Conv2d-64           [1, 8, 160, 160]             264
+   InstanceNorm2d-65           [1, 8, 160, 160]               0
+             ReLU-66           [1, 8, 160, 160]               0
+        Dropout2d-67           [1, 8, 160, 160]               0
+           Conv2d-68           [1, 8, 160, 160]              72
+   InstanceNorm2d-69           [1, 8, 160, 160]               0
+             ReLU-70           [1, 8, 160, 160]               0
+        Dropout2d-71           [1, 8, 160, 160]               0
+        ConvBlock-72           [1, 8, 160, 160]               0
+           Conv2d-73           [1, 8, 320, 320]             136
+   InstanceNorm2d-74           [1, 8, 320, 320]               0
+             ReLU-75           [1, 8, 320, 320]               0
+        Dropout2d-76           [1, 8, 320, 320]               0
+           Conv2d-77           [1, 8, 320, 320]              72
+   InstanceNorm2d-78           [1, 8, 320, 320]               0
+             ReLU-79           [1, 8, 320, 320]               0
+        Dropout2d-80           [1, 8, 320, 320]               0
+        ConvBlock-81           [1, 8, 320, 320]               0
+           Conv2d-82           [1, 4, 320, 320]              36
+           Conv2d-83           [1, 1, 320, 320]               5
+           Conv2d-84           [1, 1, 320, 320]               2
+================================================================
+Total params: 23,779
+Trainable params: 23,779
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.39
+Forward/backward pass size (MB): 192.77
+Params size (MB): 0.09
+Estimated Total Size (MB): 193.25
+----------------------------------------------------------------
+Training on 1714
+Validating on 420
+Epoch: 1/20
+ Train Loss: 0.13152325620043165 | Validation Loss: 0.12567985343670782
+Train Time: 42.686661286017625 | Validation Time: 10.624496598000405
+Epoch: 2/20
+ Train Loss: 0.11689516453402762 | Validation Loss: 0.11944429228532219
+Train Time: 42.92167838700698 | Validation Time: 10.795453464001184
+Epoch: 3/20
+ Train Loss: 0.11535166040191526 | Validation Loss: 0.1241664184639242
+Train Time: 43.03715265597566 | Validation Time: 10.818637139978819
+Epoch: 4/20
+ Train Loss: 0.12381235700669783 | Validation Loss: 0.126707929720661
+Train Time: 42.99461209002766 | Validation Time: 10.792449358006706
+Epoch: 5/20
+ Train Loss: 0.12699258791250131 | Validation Loss: 0.12916331657924424
+Train Time: 42.978296539979056 | Validation Time: 10.758325965987751
+Epoch: 6/20
+ Train Loss: 0.1217374787230261 | Validation Loss: 0.12254640889426029
+Train Time: 42.921864801988704 | Validation Time: 10.74874614799046
+Epoch: 7/20
+ Train Loss: 0.1187766470094493 | Validation Loss: 0.12661607341326003
+Train Time: 42.92889102597837 | Validation Time: 10.74213620700175
+Epoch: 8/20
+ Train Loss: 0.12142613015948442 | Validation Loss: 0.12005552672623607
+Train Time: 42.90013072200236 | Validation Time: 10.760880504996749
+Epoch: 9/20
+ Train Loss: 0.1250222594228809 | Validation Loss: 0.11982678763175204
+Train Time: 42.924512730009155 | Validation Time: 10.765676881012041
+Epoch: 10/20
+ Train Loss: 0.11511519319114522 | Validation Loss: 0.11941970756588104
+Train Time: 42.908711268974 | Validation Time: 10.779274522006745
+Epoch: 11/20
+ Train Loss: 0.11687259434256322 | Validation Loss: 0.1245412740508942
+Train Time: 42.96082207397558 | Validation Time: 10.729171821993077
+Epoch: 12/20
+ Train Loss: 0.11883305061976858 | Validation Loss: 0.13228460136091783
+Train Time: 42.941282352025155 | Validation Time: 10.754117634001886
+Epoch: 13/20
+ Train Loss: 0.11749270517132743 | Validation Loss: 0.12598220631231274
+Train Time: 42.90975596301723 | Validation Time: 10.746737152978312
+Epoch: 14/20
+ Train Loss: 0.11756053686148916 | Validation Loss: 0.12318912734501379
+Train Time: 42.947672744019656 | Validation Time: 10.772599584015552
+Epoch: 15/20
+ Train Loss: 0.12620203200664773 | Validation Loss: 0.11880751729429546
+Train Time: 42.91091182499076 | Validation Time: 10.751275158982025
+Epoch: 16/20
+ Train Loss: 0.06852701605969908 | Validation Loss: 0.07591984858940326
+Train Time: 42.88174207598786 | Validation Time: 10.748337703989819
+Epoch: 17/20
+ Train Loss: 0.06871553659547285 | Validation Loss: 0.06623555212196847
+Train Time: 42.96388453998952 | Validation Time: 10.741329117998248
+Epoch: 18/20
+ Train Loss: 0.06907533369701907 | Validation Loss: 0.06796411128394601
+Train Time: 42.86515296399011 | Validation Time: 10.754839339992031
+Epoch: 19/20
+ Train Loss: 0.06993495733103416 | Validation Loss: 0.06857543277158944
+Train Time: 42.91506583002047 | Validation Time: 10.728172356000869
+Epoch: 20/20
+ Train Loss: 0.06851344628047565 | Validation Loss: 0.06423798315601678
+Train Time: 42.86620179901365 | Validation Time: 10.786426220991416
+torch.Size([320, 320])
+torch.Size([320, 320])
+torch.Size([320, 320])
+Average SSIM: 0.42711181033729034
+30
+61
+94
+127
+155
+184
+209
+239
+267
+295
+320
+352
+377
+407
+444
+479
+514
+547
+579
+604
+637
+667
+700
+729
+759
+791
+822
+857
+892
+920
