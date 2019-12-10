@@ -18,7 +18,7 @@ from functions.subsample import MaskFunc
 from torch import nn
 from torch.nn import Conv2d, Sequential, InstanceNorm2d, ReLU, Dropout2d, Module, ModuleList, functional as F
 from torch.utils.data import DataLoader
-from torch.optim import RMSprop, Adam, SGD, ASGD, Adamax
+from torch.optim import Adam
 from torch.optim.lr_scheduler import StepLR
 from torchsummary import summary
 from scipy.io import loadmat
@@ -34,14 +34,14 @@ data_path_train = '/data/local/NC2019MRI/train'
 data_path_test = '/data/local/NC2019MRI/test'
 
 # CHANGE OUTPUT DIRECTORY - output directory for test images
-out_dir = "/tmp/bhm699/4f/"
+out_dir = "/tmp/bhm699/8f/"
 
 # 0.2 = split training dataset into 20% validation data, 80% training data
 train_val_split = 0.2
 
-# for mask 4AF - acc = 4, cen = 0.08
-acc = 4
-cen_fract = 0.08
+# for mask 8AF - acc = 8, cen = 0.04
+acc = 8
+cen_fract = 0.04
 
 seed = True # random masks for each slice 
 num_workers = 12 # data loading is faster using a bigger number for num_workers. 0 means using one cpu to load data
@@ -54,11 +54,11 @@ chans = 8
 kernel_size=(1, 1)
 
 # Hyperparameters
-epochs = 30
+epochs = 75
 dropout_prob = 0.01
-learning_rate = 0.001
+learning_rate = 0.1
 weight_decay = 0.0
-step_size = 15
+step_size = 20
 lr_gamma = 0.1 # change in learning rate
 num_pool_layers = 4
 
@@ -80,9 +80,6 @@ def show_slices(data, slice_nums, cmap=None): # visualisation
 
 
 # ### Data Loading and Processing
-
-# In[ ]:
-
 
 def load_data_path(train_data_path):
 #     eventually make this random subsets by shuffling data for
@@ -368,8 +365,8 @@ if __name__ == '__main__':
     
     # create model object
     model = UnetModel(in_chans=in_chans, out_chans=out_chans, chans=chans, num_pool_layers=4, drop_prob=dropout_prob, kernel_size=kernel_size).to(device)
-    # use RMSprop as optimizer
-    optimizer = SGD(model.parameters(), learning_rate, weight_decay=weight_decay)
+    # use Adam as optimizer
+    optimizer = Adam(model.parameters(), learning_rate, weight_decay=weight_decay)
 
 
 # In[ ]:
@@ -410,13 +407,13 @@ for epoch in range(current_epoch, epochs):
 plt.plot(train_loss_ot, label='train')
 plt.plot(val_loss_ot, label='validation')
 plt.ylabel('loss')
-plt.xlabel('epoch')
+plt.xlabel('epoch juliano was here <:3')
 plt.legend()
-plt.savefig('loss-4f-' + str(epochs) + 'sgd.png')
+plt.savefig('loss-8f-' + str(epochs) + '.png')
 # plt.show()
 
 
-# ### Test Model (this method is just for testing visualization of the images)
+# ### Test Model
 
 # In[ ]:
 
@@ -559,7 +556,7 @@ print("Average SSIM: " + str(ssim))
 #         return get_test_batch(subject_id, self.acceleration, self.center_fraction, self.use_seed)
 
 
-# # In[ ]:
+# In[ ]:
 
 
 # def get_test_batch(subject_id, acc, center_fract, use_seed):
@@ -567,7 +564,7 @@ print("Average SSIM: " + str(ssim))
 #     fname, rawdata_name, slice = subject_id  
     
 #     with h5py.File(rawdata_name, 'r') as data:
-#         rawdata = data['kspace_4af'][slice]             
+#         rawdata = data['kspace_8af'][slice]             
 #         slice_kspace = T.to_tensor(rawdata).unsqueeze(0)
 #         S, Ny, Nx, ps = slice_kspace.shape
     
@@ -593,7 +590,7 @@ print("Average SSIM: " + str(ssim))
 #     return img_und.squeeze(0), rawdata_und.squeeze(0), masks.squeeze(0), norm
 
 
-# # In[ ]:
+# In[ ]:
 
 
 # def save_reconstructions(reconstruction, fname):
@@ -608,7 +605,7 @@ print("Average SSIM: " + str(ssim))
 #         f.create_dataset('reconstruction', data=reconstruction)
 
 
-# # In[ ]:
+# In[ ]:
 
 
 # # load test data
@@ -619,8 +616,8 @@ print("Average SSIM: " + str(ssim))
 #     if not os.path.isfile(subject_path): continue 
         
 #     with h5py.File(subject_path,  "r") as hf:
-#         num_slice_4f = hf['kspace_4af'].shape[0]
-#         mask_4f = hf['mask_4af']
+#         num_slice_4f = hf['kspace_8af'].shape[0]
+#         mask_4f = hf['mask_8af']
 
 #         test_data += [(fname, subject_path, slice) for slice in range(5, num_slice_4f)]
 #         # create data loader 
