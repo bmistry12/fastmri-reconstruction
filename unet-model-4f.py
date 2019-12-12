@@ -54,11 +54,11 @@ chans = 8
 kernel_size=(1, 1)
 
 # Hyperparameters
-epochs = 30
+epochs = 80
 dropout_prob = 0.01
 learning_rate = 0.001
 weight_decay = 0.0
-step_size = 15
+step_size = 11
 lr_gamma = 0.1 # change in learning rate
 num_pool_layers = 4
 
@@ -271,6 +271,10 @@ class ConvBlock(Module):
             Conv2d(out_chans, out_chans, kernel_size=self.kernel_size),
             InstanceNorm2d(out_chans),
             ReLU(),
+            Dropout2d(drop_prob),
+            Conv2d(out_chans, out_chans, kernel_size=self.kernel_size),
+            InstanceNorm2d(out_chans),
+            ReLU(),
             Dropout2d(drop_prob)
         )
 
@@ -369,7 +373,7 @@ if __name__ == '__main__':
     # create model object
     model = UnetModel(in_chans=in_chans, out_chans=out_chans, chans=chans, num_pool_layers=4, drop_prob=dropout_prob, kernel_size=kernel_size).to(device)
     # use RMSprop as optimizer
-    optimizer = SGD(model.parameters(), learning_rate, weight_decay=weight_decay)
+    optimizer = RMSprop(model.parameters(), learning_rate, weight_decay=weight_decay)
 
 
 # In[ ]:
@@ -412,7 +416,7 @@ plt.plot(val_loss_ot, label='validation')
 plt.ylabel('loss')
 plt.xlabel('epoch')
 plt.legend()
-plt.savefig('loss-4f-' + str(epochs) + 'sgd.png')
+plt.savefig('loss-4f-' + str(epochs) + str(chans) + 'norm-rmsprop.png')
 # plt.show()
 
 
